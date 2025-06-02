@@ -8,9 +8,16 @@
     <title>Tienda</title>
 </head>
 <body>
-    
-    <div class="gallery-container">
+    <!--Navbar-->
+    <header class="Navbar">
+        <img src="../IMG/FERREMAS_logo.png" alt="logo" class="navbar-logo">
+        <div class="navbar-btns">
+            <button class="nav-btn" id="to-gallery">Galeria</button>                             
+            <button class="nav-btn" id="log-out">Cerrar Sesión</button>
+        </div>
+    </header>
 
+    <div class="gallery-container">
         <!--carrito de compras-->
         <div id="carrito" style="padding:20px; background:#eee;">
             <h2>Carrito de Compras</h2>
@@ -139,12 +146,14 @@
     <script src="../JS/carrito.js"></script>
     <!--Datos del user-->
     <script>
+        document.getElementById('to-gallery').focus();
+
         const user_name = sessionStorage.getItem('user_name');
         const user_email = sessionStorage.getItem('user_email');
         const user_type = sessionStorage.getItem('user_type');
         const user_id = sessionStorage.getItem('user_id');
 
-        //document.getElementById('nombre').textContent = 'Bienvenido ' + user_name + '!';
+        document.getElementById('nombre').textContent = user_name;
         //document.getElementById('e-mail').textContent = user_email;
         //document.getElementById('tipo').textContent = user_type;
         //document.getElementById('id').textContent = user_id;
