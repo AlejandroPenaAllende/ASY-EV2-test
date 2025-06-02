@@ -27,7 +27,11 @@ function mostrarCarrito() {
   if (carrito.length === 0) {
     tabla.innerHTML = '<tr><td colspan="7" class="empty">El carrito está vacío</td></tr>';
     document.getElementById('total-carrito').textContent = '';
+    document.getElementById('totalInput').value = 0;
+    document.getElementById('paybtn').disabled = true;
     return;
+  }else{
+    document.getElementById('paybtn').disabled = false;
   }
 
   carrito.forEach((item, index) => {
