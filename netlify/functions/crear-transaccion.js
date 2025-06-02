@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
     buy_order: 'order00001',
     session_id: 'session00001',
     amount: amount,
-    return_url: 'https://youtube.com'
+    return_url: 'https://ferremas-test.netlify.app/html/result'
   };
 
   try {
