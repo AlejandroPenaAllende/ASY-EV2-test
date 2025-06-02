@@ -7,5 +7,32 @@
 </head>
 <body>
     HOLAAAAAAAAAAAAAAAA
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token_ws');
+
+        if (token) {
+            fetch('/.netlify/functions/confirmar-transaccion', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ token: token })
+            })
+            .then(res => res.json())
+            .then(data => {
+            console.log('Resultado:', data);
+            // Muestra en pantalla
+            if (data.status === 'AUTHORIZED') {
+                document.getElementById('mensaje').textContent = '¡Pago exitoso!';
+            } else {
+                document.getElementById('mensaje').textContent = 'El pago no fue exitoso.';
+            }
+            })
+            .catch(err => {
+            console.error('Error al confirmar:', err);
+            document.getElementById('mensaje').textContent = 'Error al procesar el pago.';
+            });
+        }
+    </script>
 </body>
 </html>
