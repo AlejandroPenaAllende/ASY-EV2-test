@@ -1,6 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Convergence&family=Gantari:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap');
 
 /*================*/
+    /*--Navbar--*/
+/*================*/
+.Navbar{
+    height: 65px;
+    background: white;
+    box-shadow: 0px 0px 10px 3px;
+    z-index: 25;
+    position: relative;
+}
+
+.navbar-logo{
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.navbar-btns{
+    width: fit-content;
+    float: right;
+    transform: translateY(25%);
+}
+
+.nav-btn{
+    width: 150px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    height: 35px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(34, 34, 252);
+    color: white;
+    margin-right: 15px;
+    transition: background-color 200ms ease-in, color 200ms ease-in, border  200ms ease-in ;
+}
+.nav-btn:focus{
+    background-color: white;
+    border: 3px solid rgb(34, 34, 252);
+    color: rgb(34, 34, 252);
+    font-weight: bolder;
+}
+
+/*================*/
     /*--Base--*/
 /*================*/
 *{
@@ -175,4 +218,3 @@ body{
     padding-top: 35px;
     padding-bottom: 0px;
 }
-
