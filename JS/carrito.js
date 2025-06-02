@@ -29,9 +29,11 @@ function mostrarCarrito() {
     document.getElementById('total-carrito').textContent = '';
     document.getElementById('totalInput').value = 0;
     document.getElementById('paybtn').disabled = true;
+    document.getElementById('paybtn').style.opacity = 0.45;
     return;
   }else{
     document.getElementById('paybtn').disabled = false;
+    document.getElementById('paybtn').style.opacity = 1.00;
   }
 
   carrito.forEach((item, index) => {
