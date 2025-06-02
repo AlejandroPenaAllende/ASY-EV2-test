@@ -81,10 +81,11 @@ function mostrarCarrito() {
   });
 
   // Botones de logout o pagar
-  document.getElementById('log-out')?.addEventListener('click', () => {
+  document.getElementById('log-out').addEventListener('click', () => {
     carrito = [];
-    localStorage.removeItem('carrito'); 
-    mostrarCarrito();
+    localStorage.removeItem('carrito');
+    sessionStorage.clear(); 
+    window.location = "../index.html";
   });
 
   document.getElementById('pay')?.addEventListener('click', () => {
